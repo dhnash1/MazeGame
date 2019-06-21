@@ -10,7 +10,22 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	private void Update () {
+		if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RestartGame();
+        }
 	}
+
+    public Maze mazePrefab;
+    private Maze mazeInstance;
+
+    private void BeginGame() {
+        mazeInstance = Instantiate(mazePrefab) as Maze;
+
+    }
+    private void RestartGame() {
+        Destroy(mazeInstance.gameObject);
+        BeginGame();
+    }
 }
