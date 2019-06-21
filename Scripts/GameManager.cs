@@ -22,9 +22,11 @@ public class GameManager : MonoBehaviour {
 
     private void BeginGame() {
         mazeInstance = Instantiate(mazePrefab) as Maze;
+       StartCoroutine(mazeInstance.generate());
 
     }
     private void RestartGame() {
+        StopAllCoroutines();
         Destroy(mazeInstance.gameObject);
         BeginGame();
     }
