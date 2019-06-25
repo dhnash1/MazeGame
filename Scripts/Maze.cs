@@ -12,7 +12,7 @@ public class Maze : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
 	}
 	public IEnumerator generate()
     {
@@ -39,6 +39,6 @@ public class Maze : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }
